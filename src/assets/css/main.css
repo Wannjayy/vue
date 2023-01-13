@@ -32,3 +32,7 @@
     font-weight: bold;
     color: black;
 }
+
+.img-fluid {
+    border-radius: 15px;
+}
