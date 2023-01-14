@@ -62,14 +62,14 @@ export default {
     },
     searchProduk() {
       axios
-        .get("https://api-wannjayy.vercel.app/allproduk" + this.search)
+        .get("https://wannjay-api-tokopaedi.vercel.app/allproduk" + this.search)
         .then((response) => this.setProduct(response.data))
         .catch((error) => console.log(error));
     },
   },
   mounted() {
     axios
-      .get("https://api-wannjayy.vercel.app/allproduk")
+      .get("https://wannjay-api-tokopaedi.vercel.app/allproduk")
       .then((response) => this.setProduct(response.data))
       .catch((error) => console.log(error));
   },

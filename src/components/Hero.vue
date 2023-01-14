@@ -31,7 +31,7 @@
           <div class="d-flex h-100">
             <div class="justify-content-center align-self-center">
               <h2>
-                <strong>Belanja Dirumah Aja, </strong> <br />in Your Gadget
+                <strong>Belanja Dirumah Aja, </strong> <br />tokopaedi solusinya !
               </h2>
               <p>Belanja apa aja lebih murah di tokopaedi!</p>
               <button class="btn btn-lg btn-success">

@@ -83,7 +83,7 @@ export default {
       if ((this.pesan.jumlah_pesanan && this.pesan.keterangan)) {
         this.pesan.product = this.product;
         axios
-          .post("https://api-wannjayy.vercel.app/keranjang", this.pesan)
+          .post("https://wannjay-api-tokopaedi.vercel.app/keranjang", this.pesan)
           .then(() => {
             this.$router.push({ path: "/keranjang" });
             this.$toast.success("Sukses Masuk Keranjang", {
@@ -106,7 +106,7 @@ export default {
   },
   mounted() {
     axios
-      .get("https://api-wannjayy.vercel.app/allproduk/" + this.$route.params.id)
+      .get("https://wannjay-api-tokopaedi.vercel.app/allproduk/" + this.$route.params.id)
       .then((response) => this.setProduct(response.data))
       .catch((error) => console.log(error));
   },

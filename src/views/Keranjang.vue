@@ -136,7 +136,7 @@ export default {
     },
     hapusKeranjang(_id) {
       axios
-        .delete("https://api-wannjayy.vercel.app/keranjang/" + _id)
+        .delete("https://wannjay-api-tokopaedi.vercel.app/keranjang/" + _id)
         .then(() => {
           this.$toast.error("Produk telah dihapus dari keranjang !", {
             type: "error",
@@ -145,7 +145,7 @@ export default {
             dismissible: true,
           });
           axios
-            .get("https://api-wannjayy.vercel.app/keranjang")
+            .get("https://wannjay-api-tokopaedi.vercel.app/keranjang")
             .then((response) => this.setKeranjangs(response.data))
             .catch((error) => console.log(error));
         })
@@ -155,12 +155,12 @@ export default {
       if (this.pesan.nama && this.pesan.alamat) {
         this.pesan.keranjangs = this.keranjangs;
         axios
-          .post("https://api-wannjayy.vercel.app/pesanan", this.pesan)
+          .post("https://wannjay-api-tokopaedi.vercel.app/pesanan", this.pesan)
           .then(() => {
 
             this.keranjangs.map(function (item) {
               return axios
-                .delete("https://api-wannjayy.vercel.app/keranjang/" + item._id)
+                .delete("https://wannjay-api-tokopaedi.vercel.app/keranjang/" + item._id)
                 .catch((error) => console.log(error));
             });
 
@@ -185,7 +185,7 @@ export default {
   },
   mounted() {
     axios
-      .get("https://api-wannjayy.vercel.app/keranjang")
+      .get("https://wannjay-api-tokopaedi.vercel.app/keranjang")
       .then((response) => this.setKeranjangs(response.data))
       .catch((error) => console.log(error));
   },

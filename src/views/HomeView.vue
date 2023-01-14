@@ -54,7 +54,7 @@ export default {
   },
   mounted() {
     axios
-      .get("https://api-wannjayy.vercel.app/produk")
+      .get("https://wannjay-api-tokopaedi.vercel.app/produk")
       .then((response) => this.setProduct(response.data))
       .catch((error) => console.log(error));
   },

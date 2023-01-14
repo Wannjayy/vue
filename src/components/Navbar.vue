@@ -54,7 +54,7 @@ export default {
   },
   mounted() {
     axios
-      .get("https://api-wannjayy.vercel.app/keranjang")
+      .get("https://wannjay-api-tokopaedi.vercel.app/keranjang")
       .then((response) => this.setJumlah(response.data))
       .catch((error) => console.log(error));
   },
